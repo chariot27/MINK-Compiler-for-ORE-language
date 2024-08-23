@@ -1,0 +1,2 @@
+- Adicionar todos os conteudos do arquivo variables.py
+- Fazer com que ele leia multiplas linhas
