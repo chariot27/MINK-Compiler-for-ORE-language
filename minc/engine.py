@@ -201,12 +201,13 @@ if __name__==("__main__"):
                         valor = None
                 variaveis[nome_variavel] = valor
             elif linha.startswith("impout"):
-                nome_variavel = linha[7:-1]
-                if nome_variavel in variaveis:
-                    valor = variaveis[nome_variavel]
-                    if isinstance(valor, str):
-                        print(valor)
+                linha_original = linha[7:-1]  # remove "impout(" e ")"
+                while "{" in linha_original and "}" in linha_original:
+                    start = linha_original.index("{")
+                    end = linha_original.index("}")
+                    variavel = linha_original[start+1:end]
+                    if variavel in variaveis:
+                        linha_original = linha_original.replace("{" + variavel + "}", str(variaveis[variavel]))
                     else:
-                        print(valor)  # imprime o resultado da conta
-                else:
-                    print("Variável não definida")
+                        linha_original = linha_original.replace("{" + variavel + "}", "Variável não definida")
+                print(linha_original[1:-1])

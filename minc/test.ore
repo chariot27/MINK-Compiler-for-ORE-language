@@ -1,3 +1,9 @@
 nome = "Max"
-impout(nome)
-impout("O nome é {}".format(nome))
+i = 12+3
+n = "N"
+num = 1
+impout("Nome: {nome}")
+impout("i: {i}")
+impout("n: {n}")
+impout("Nomes")
+impout("num: {num}")

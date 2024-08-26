@@ -4,7 +4,8 @@ import re
 # já atribui strings 
 # já atribui contas matemáticas
 # - já atribuido exemplo = impout(var)
-# falta atribuir variaveis na saida de impout || impout("o nome é: {}".format(var))
+# - já atribuido exemplo = impout("Nome: {nome}")
+# já atribuido variaveis na saida de impout
 
 class AtribuidorDeVariaveis:
     def __init__(self, lexer, parser):
