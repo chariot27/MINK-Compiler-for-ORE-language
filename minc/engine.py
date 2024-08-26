@@ -16,6 +16,7 @@ plus = "+"
 minus = "-"
 multiply = "*"
 divide = "/"
+mod = "%"
 
 class Lexer:
     def __init__(self):
@@ -58,6 +59,8 @@ class Lexer:
                 tokens.append(Token("*"))
             elif self.char == divide:
                 tokens.append(Token("/"))
+            elif self.char == mod:
+                tokens.append(Token("%"))
             elif self.char in ['"', "'"]:
                 self.next()
                 st = ""
@@ -117,6 +120,9 @@ class Parser:
             elif self.tok.type == "/":
                 self.nextTok()
                 re = Node("/", [re, self.term()])
+            elif self.tok.type == "%":
+                self.nextTok()
+                re = Node("%", [re, self.term()])
         return re
 
     def factor(self):
@@ -170,17 +176,19 @@ class Interpreter:
             return self.exec_node(node.value[0], l, inum) * self.exec_node(node.value[1], l, inum)
         elif node.type == "/":
             return self.exec_node(node.value[0], l, inum) / self.exec_node(node.value[1], l, inum)
+        elif node.type == "%":
+            return self.exec_node(node.value[0], l, inum) % self.exec_node(node.value[1], l, inum)
         
 
 if __name__==("__main__"):
     i=Interpreter()
     arquivo = open("test.ore", "r")
-    conteudo = arquivo.read()
-    if conteudo.startswith("impout"):
-        out=interpreter.create_interpreter()
-        out.execute_file('test.ore')
-    else:
-        ie=i.eval(conteudo)
-        print("Resultado: {}".format(ie))
-        arquivo.close()
-            
+    for linha in arquivo:
+        if linha.startswith("impout"):
+            out = interpreter.create_interpreter()
+            out.execute(linha.strip()[7:])  # Execute a linha atual com o interpretador impout
+        else:
+            # Execute a linha com o interpretador
+            ie = i.eval(linha.strip())
+            print("Resultado: {}".format(ie))
+    arquivo.close()

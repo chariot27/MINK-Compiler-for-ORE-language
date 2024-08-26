@@ -1,3 +1,7 @@
+# ENTRADA E SAÍDA
+impout = "impout" # CHECK
+inlex = "inlex"
+
 class Lexer:
     def __init__(self, txt):
         self.txt = txt
@@ -99,9 +103,16 @@ class Interpreter:
     
     def execute_file(self, filename):
         with open(filename, 'r') as f:
-            content = f.read()
-            result = self.eval(content)
-            print(result)
+            for linha in f:
+                self.execute(linha.strip())
+                
+    
+    def execute(self, code):
+        # Remova os parênteses extras da linha
+        code = code.strip('()')
+        # Execute o código com o interpretador impout
+        result = eval(code)
+        print(result)
             
     
 def create_interpreter():
