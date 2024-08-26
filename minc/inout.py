@@ -1,6 +1,6 @@
 # ENTRADA E SAÍDA
 impout = "impout" # CHECK
-inlex = "inlex"
+input = "input"
 
 class Lexer:
     def __init__(self, txt):
@@ -106,6 +106,12 @@ class Interpreter:
             for linha in f:
                 self.execute(linha.strip())
                 
+        code = code.strip('()')
+        if code.startswith("impout"):
+            result = self.eval(code)
+        else:
+            result = eval(code)
+        print(result)
     
     def execute(self, code):
         # Remova os parênteses extras da linha
@@ -113,9 +119,17 @@ class Interpreter:
         # Execute o código com o interpretador impout
         result = eval(code)
         print(result)
-            
+        
+    def readline(self):
+        code = input(">>> ")
+        while True:
+            code = input(">>> ")
+            if not code.strip():  # if input is empty, break out of loop
+                break
+            self.execute(code)     
     
 def create_interpreter():
     lexer = Lexer("")
     parser = Parser(lexer)
     return Interpreter(lexer, parser)
+

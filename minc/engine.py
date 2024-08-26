@@ -2,6 +2,9 @@ import inout
 import os
 import variables
 
+# descobrir por não imprimi os valores do input no impout
+# adicionar comentários ao codigo
+
 class Token:
     def __init__(self, type="", value=None):
         self.type = type
@@ -180,7 +183,6 @@ class Interpreter:
             return self.exec_node(node.value[0], l, inum) / self.exec_node(node.value[1], l, inum)
         elif node.type == "%":
             return self.exec_node(node.value[0], l, inum) % self.exec_node(node.value[1], l, inum)
-        
 
 if __name__==("__main__"):
     variaveis = {}
@@ -211,3 +213,4 @@ if __name__==("__main__"):
                     else:
                         linha_original = linha_original.replace("{" + variavel + "}", "Variável não definida")
                 print(linha_original[1:-1])
+            

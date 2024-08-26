@@ -1,9 +1,2 @@
-nome = "Max"
-i = 12+3
-n = "N"
-num = 1
-impout("Nome: {nome}")
-impout("i: {i}")
-impout("n: {n}")
-impout("Nomes")
-impout("num: {num}")
+a = input()
+impout(a)
