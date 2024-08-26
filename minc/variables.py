@@ -2,12 +2,9 @@ import re
 
 # já atribui inteiros 
 # já atribui strings 
-# falta atribuir floats
-# falta atribuir contas matemáticas
-# falta atribuir variaveis na saida de impout exemplo = impout(var) || impout("o nome é: {}".format(var))
-# falta atribuir listas
-# falta atribuir matrizes
-
+# já atribui contas matemáticas
+# - já atribuido exemplo = impout(var)
+# falta atribuir variaveis na saida de impout || impout("o nome é: {}".format(var))
 
 class AtribuidorDeVariaveis:
     def __init__(self, lexer, parser):
@@ -16,6 +13,13 @@ class AtribuidorDeVariaveis:
         self.variaveis = {}
 
     def atribuir(self, nome_var, valor):
+        if isinstance(valor, str) and valor.startswith('='):
+            expr = valor[1:]
+            valor = self.eval_expr(expr)
+        elif isinstance(valor, str) and any(c in valor for c in '+-*/()'):
+            valor = self.eval_expr(valor)
+        else:
+            valor = self.eval_expr(str(valor))  # Try to evaluate the value as an expression
         self.variaveis[nome_var] = valor
 
     def get_variavel(self, nome_var):
@@ -27,11 +31,20 @@ class AtribuidorDeVariaveis:
         for node in ast:
             if isinstance(node, AssignmentNode):
                 nome_var = node.var
-                valor = self.eval(node.expr)
+                valor = node.expr
                 self.atribuir(nome_var, valor)
             elif isinstance(node, PrintNode):
                 valor = self.eval(node.expr)
                 print(valor)
+    
+    def eval_expr(self, expr):
+        return self.eval(expr)
+
+    def atribuir(self, nome_var, valor):
+        if isinstance(valor, str) and valor.startswith('='):
+            expr = valor[1:]
+            valor = self.eval_expr(expr)
+        self.variaveis[nome_var] = valor
 
     def eval(self, node):
         if isinstance(node, VariableNode):
@@ -134,14 +147,12 @@ class BinaryOpNode(Node):
         self.right = right
 
 # Exemplo de uso
-if __name__==("__main__"):
+def main():
     lexer = Lexer()
     parser = Parser()
     atribuidor = AtribuidorDeVariaveis(lexer, parser)
     arquivo = open("test.ore", "r")
     for linha in arquivo:
-        codigo = arquivo.read()
-        atribuidor.executar_codigo(codigo)
+        atribuidor.executar_codigo(linha)
         # Descobrir por não atribui número inteiro no arquivo
-        print(atribuidor.get_variavel('x'))
-        print(atribuidor.get_variavel('nome'))
+    

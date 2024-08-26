@@ -1,3 +1,0 @@
-# BIBLIOTECAS
-
-digging = "$digging"

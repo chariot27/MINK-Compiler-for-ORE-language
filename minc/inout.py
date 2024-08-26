@@ -119,4 +119,3 @@ def create_interpreter():
     lexer = Lexer("")
     parser = Parser(lexer)
     return Interpreter(lexer, parser)
-

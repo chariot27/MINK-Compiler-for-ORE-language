@@ -1,2 +1,3 @@
-x = 1
 nome = "Max"
+impout(nome)
+impout("O nome é {}".format(nome))

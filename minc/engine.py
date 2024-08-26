@@ -1,4 +1,6 @@
-import inout as interpreter
+import inout
+import os
+import variables
 
 class Token:
     def __init__(self, type="", value=None):
@@ -181,14 +183,30 @@ class Interpreter:
         
 
 if __name__==("__main__"):
-    i=Interpreter()
-    arquivo = open("test.ore", "r")
-    for linha in arquivo:
-        if linha.startswith("impout"):
-            out = interpreter.create_interpreter()
-            out.execute(linha.strip()[7:])  # Execute a linha atual com o interpretador impout
-        else:
-            # Execute a linha com o interpretador
-            ie = i.eval(linha.strip())
-            print("Resultado: {}".format(ie))
-    arquivo.close()
+    variaveis = {}
+    with open("test.ore", "r") as arquivo:
+        for linha in arquivo:
+            linha = linha.strip()
+            if "=" in linha:
+                nome_variavel, valor = linha.split("=")
+                nome_variavel = nome_variavel.strip()
+                valor = valor.strip()
+                if valor.startswith('"') and valor.endswith('"'):
+                    valor = valor[1:-1]  # remove aspas
+                else:
+                    try:
+                        valor = eval(valor)  # avalia a expressão como uma conta
+                    except Exception as e:
+                        print(f"Erro ao avaliar expressão: {e}")
+                        valor = None
+                variaveis[nome_variavel] = valor
+            elif linha.startswith("impout"):
+                nome_variavel = linha[7:-1]
+                if nome_variavel in variaveis:
+                    valor = variaveis[nome_variavel]
+                    if isinstance(valor, str):
+                        print(valor)
+                    else:
+                        print(valor)  # imprime o resultado da conta
+                else:
+                    print("Variável não definida")
