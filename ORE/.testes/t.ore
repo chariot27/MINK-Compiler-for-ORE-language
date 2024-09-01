@@ -1,0 +1,20 @@
+impout math
+var pi = math.pi
+
+impout("Goodnight World!")
+var a = 0
+while a <= 5 then 
+    var a = a + 1  
+    impout("i love you <3 my precious")
+end
+impout(a)
+
+# for i = 1 to 6 then var result = result * i 
+# for i = 5 to 0 step -1 then var result = result * i
+# while i < 10 then var i = i + 1
+
+var i = 0
+while i < 10 then
+    var i = i + 1
+end
+impout(i)

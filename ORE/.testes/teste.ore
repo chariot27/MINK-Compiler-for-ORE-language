@@ -1,0 +1,27 @@
+impout(" ")
+impout("Media Aritmetica")
+func media(nota1,nota2)
+    var soma_result = nota1 + nota2
+    var result = soma_result / 2
+    impout(result)
+
+    if result >= 6 then impout("Passou de ano")
+    if result < 6 then impout("Reprovou de ano")
+end
+impout(" ")
+impout("TESTES")
+impout(" ")
+impout("option 1")
+impout(" ")
+
+impout("selecione uma option: ")
+var x = input_int()
+impout(" ")
+impout("Nota A: ")
+var a = input_int()
+impout(" ")
+impout("Nota B: ")
+var b = input_int()
+impout(" ")
+if x == 1 then media(a,b)
+impout(" ")
