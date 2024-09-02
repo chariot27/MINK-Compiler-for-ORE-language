@@ -8,10 +8,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 
 ## Operadores Matemáticos da Linguagem
  
-+ | adição.
-- | subtração.
-/ | divisão.
-* | multiplicação.
+(Operador| Função)
 
 
 ## Operadores Lógicos da Linguagem
