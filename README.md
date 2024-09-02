@@ -30,6 +30,14 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | >= | maior ou igual que |
 | <= | manor ou igual que |
 
+## Tipos Primitivos da Linguagem
+
+| Tipo | Função |
+|--- |--- |
+| string | define letras e números | 
+| int | números inteiros ex: 17 |
+| float | números reais quebrados ex: 2.1 |
+
 ## Atribuição de Variaveis
 ## Comandos de Comparação
 ## Laços de Repetição
