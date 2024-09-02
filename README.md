@@ -82,7 +82,17 @@ Desta forma você cria e atribui uma variavel
 | while | i < num ou list | then | expr |
 |--- |--- |--- |--- |
 
-
-
 ### Funções
+
+#### no arquivo
+
+| func | nome da func(parametros) | expr | end |
+|--- |--- |--- |--- |
+
+#### na shell
+
+| func | nome da func(parametros) | -> |expr | 
+|--- |--- |--- |--- |
+
+
 ### Funções Built In
