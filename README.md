@@ -6,7 +6,11 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 - rode em modo debug cada arquivo na ordem ore_basic.py -> format.py -> shell.py
 - depois para executar só rodar em modo debug o shell.py
 
-## Operadores Matemáticos da Linguagem
+### Manual de execução para arquivos
+| run("path até o arquivo ou o arquivo.ore") |
+|--- |
+
+### Operadores Matemáticos da Linguagem
  
 | Operador | Função |
 |--- |--- |
@@ -17,7 +21,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | ^ | potenciação |
 
 
-## Operadores Lógicos da Linguagem
+### Operadores Lógicos da Linguagem
 
 | Operador | Função |
 |--- |--- |
@@ -30,7 +34,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | >= | maior ou igual que |
 | <= | manor ou igual que |
 
-## Tipos Primitivos da Linguagem
+### Tipos Primitivos da Linguagem
 
 | Tipo | Função |
 |--- |--- |
@@ -38,14 +42,21 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | int | números inteiros ex: 17 |
 | float | números reais quebrados ex: 2.1 |
 
-## Atribuição de Variaveis
+### Atribuição de Variaveis
 
 Desta forma você cria e atribui uma variavel
 
 | var | nome da variavel | = | expr |
 |--- |--- |--- |--- |
 
-## Comandos de Comparação
-## Laços de Repetição
-## Funções
+### Comandos de Comparação
+
+| if | variavel == 10 | then | expr |
+|--- |--- |--- |--- |
+
+| if | variavel == 10 | then | expr | else | expr
+|--- |--- |--- |--- |--- |--- |
+
+### Laços de Repetição
+### Funções
 ## Funções Built In
