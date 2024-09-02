@@ -48,6 +48,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | string | define letras e números | 
 | int | números inteiros ex: 17 |
 | float | números reais quebrados ex: 2.1 |
+| boolean | true ou false, 0 ou 1 |
 
 ### Atribuição de Variaveis
 
@@ -96,3 +97,8 @@ Desta forma você cria e atribui uma variavel
 
 
 ### Funções Built In
+
+| func | nome da func(parametros) |
+|--- |--- |
+
+
