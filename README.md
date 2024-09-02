@@ -10,7 +10,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
  
 | Operador | Função |
 |--- |--- |
-| row 1 | column 2 | 
+| + | adição | 
 | row 2 | row 2 column 2 |
 
 
