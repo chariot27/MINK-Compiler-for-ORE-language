@@ -58,5 +58,24 @@ Desta forma você cria e atribui uma variavel
 |--- |--- |--- |--- |--- |--- |
 
 ### Laços de Repetição
+
+#### no arquivo
+
+| for | i = 0 | to | num or list | then | expr | end |
+|--- |--- |--- |--- |--- |--- |--- |
+
+| while | i < num ou list | then | expr | end |
+|--- |--- |--- |--- |--- |
+
+#### na shell
+
+| for | i = 0 | to | num or list | then | expr | 
+|--- |--- |--- |--- |--- |--- |
+
+| while | i < num ou list | then | expr |
+|--- |--- |--- |--- |
+
+
+
 ### Funções
-## Funções Built In
+### Funções Built In
