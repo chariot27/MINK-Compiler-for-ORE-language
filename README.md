@@ -7,12 +7,11 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 - depois para executar só rodar em modo debug o shell.py
 
 ## Operadores Matemáticos da Linguagem
-
-Operador | Função 
-+ | adição
-- | subtração
-/ | divisão
-* | multiplicação
+ 
++ | adição.
+- | subtração.
+/ | divisão.
+* | multiplicação.
 
 
 ## Operadores Lógicos da Linguagem
