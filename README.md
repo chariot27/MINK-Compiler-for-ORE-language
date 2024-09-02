@@ -18,6 +18,18 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 
 
 ## Operadores Lógicos da Linguagem
+
+| Operador | Função |
+|--- |--- |
+| and | e | 
+| or | ou |
+| != | diferente |
+| == | igual |
+| > | maior que |
+| < | manor que |
+| >= | maior ou igual que |
+| <= | manor ou igual que |
+
 ## Atribuição de Variaveis
 ## Comandos de Comparação
 ## Laços de Repetição
