@@ -1,6 +1,8 @@
 # ORE Programming Language
 
-Instruções ao utilizar o compilador para ser executado da maneira correta
+Criada na finalidade de criação de servidores e cibersegurança porém ainda está nos paços iniciais
+
+### Instruções ao utilizar o compilador para ser executado da maneira correta
 - utilize o vscode
 - tenha a extensão python extension pack
 - rode em modo debug cada arquivo na ordem ore_basic.py -> format.py -> shell.py
