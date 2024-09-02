@@ -40,7 +40,9 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 
 ## Atribuição de Variaveis
 
-| var | nome da variavel | igual | expr |
+Desta forma você cria e atribui uma variavel
+
+| var | nome da variavel | = | expr |
 |--- |--- |--- |--- |
 
 ## Comandos de Comparação
