@@ -8,7 +8,10 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 
 ## Operadores Matemáticos da Linguagem
  
-(Operador| Função)
+| Header | Another header | Yet another header |
+|--- |--- |--- |
+| row 1 | column 2 | column 3 |
+| row 2 | row 2 column 2 | row 2 column 3 |
 
 
 ## Operadores Lógicos da Linguagem
