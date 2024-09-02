@@ -14,6 +14,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | - | subtração |
 | / | divisão |
 | * | multiplicação |
+| ^ | potenciação |
 
 
 ## Operadores Lógicos da Linguagem
