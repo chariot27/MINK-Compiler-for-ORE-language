@@ -33,6 +33,13 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | < | manor que |
 | >= | maior ou igual que |
 | <= | manor ou igual que |
+| to | para |
+| step | passo | 
+| then | então |
+| return | retornar |
+| continue | continuar | 
+| not | não | 
+| end | fim |
 
 ### Tipos Primitivos da Linguagem
 
