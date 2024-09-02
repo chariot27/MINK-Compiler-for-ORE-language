@@ -11,7 +11,9 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 | Operador | Função |
 |--- |--- |
 | + | adição | 
-| row 2 | row 2 column 2 |
+| - | subtração |
+| / | divisão |
+| * | multiplicação |
 
 
 ## Operadores Lógicos da Linguagem
