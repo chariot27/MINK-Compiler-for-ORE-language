@@ -98,7 +98,57 @@ Desta forma você cria e atribui uma variavel
 
 ### Funções Built In
 
-| func | nome da func(parametros) |
+| NULL | vazio |
 |--- |--- |
 
+| FALSE | retorna falso |
+|--- |--- |
+
+| TRUE | retorna verdadeira |
+|--- |--- |
+
+| math_pi | retorna pi |
+|--- |--- |
+
+| math_e | retorna euler |
+|--- |--- |
+
+| impout | printa um valor |
+|--- |--- |
+
+| input | le uma string digitada pelo usuario |
+|--- |--- |
+
+| input_int | le um interiro digitado pelo usuario |
+|--- |--- |
+
+| cls | limpa terminal |
+|--- |--- |
+
+| clear | limpa terminal |
+|--- |--- |
+
+| is_num | retorna true ou false se o valor entre aspas é número |
+|--- |--- |
+
+| is_str | retorna true ou false se o valor entre aspas é letras |
+|--- |--- |
+
+| is_list | retorna true ou false se o valor entre aspas é lista |
+|--- |--- |
+
+| is_func | retorna true ou false se o valor entre aspas é função |
+|--- |--- |
+
+| append | adiciona a lista |
+|--- |--- |
+
+| pop | remove da lista |
+|--- |--- |
+
+| extend | adiciona varios valores a lista |
+|--- |--- |
+
+| len | le a lista |
+|--- |--- |
 
