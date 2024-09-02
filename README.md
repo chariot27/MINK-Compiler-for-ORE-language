@@ -42,7 +42,7 @@ Instruções ao utilizar o compilador para ser executado da maneira correta
 
 Para atribuir variaveis deve-se executar o comando da seguinte forma
 
-| var | nome da variavel | = | expr |
+| var | nome da variavel | igual | expr |
 
 ## Comandos de Comparação
 ## Laços de Repetição
