@@ -1,0 +1,40 @@
+manipulação de strings com números via input e impout
+suporte a quebra de linha
+adição da operação de resto da divisão na minha linguagem
+adição do try catch exception
+adição da operação de raiz quadrada
+suporte para variaveis do tipo date,datetime
+
+Criação de Servidores
+
+Suporte a protocolos de rede: Adicione suporte a protocolos de rede como TCP/IP, UDP, HTTP, FTP, SSH, etc.
+Gerenciamento de sockets: Forneça uma API para gerenciar sockets, incluindo a criação, configuração e manipulação de sockets.
+Suporte a servidores web: Adicione suporte a servidores web, incluindo a criação de servidores HTTP e HTTPS.
+Suporte a servidores de banco de dados: Forneça suporte a servidores de banco de dados, incluindo a criação de servidores de banco de dados e a manipulação de dados.
+Suporte a autenticação e autorização: Adicione suporte a autenticação e autorização, incluindo a criação de sistemas de autenticação e autorização.
+Pentest
+
+Suporte a ferramentas de pentest: Adicione suporte a ferramentas de pentest, incluindo a criação de ferramentas de pentest e a integração com ferramentas existentes.
+Suporte a exploração de vulnerabilidades: Forneça suporte a exploração de vulnerabilidades, incluindo a criação de exploits e a manipulação de vulnerabilidades.
+Suporte a análise de tráfego de rede: Adicione suporte a análise de tráfego de rede, incluindo a captura e análise de pacotes de rede.
+Suporte a criptografia: Forneça suporte a criptografia, incluindo a criação de algoritmos de criptografia e a manipulação de dados criptografados.
+Suporte a anonimização: Adicione suporte a anonimização, incluindo a criação de sistemas de anonimização e a manipulação de dados anonimizados.
+Segurança
+
+Suporte a segurança de rede: Adicione suporte a segurança de rede, incluindo a criação de firewalls e a configuração de segurança de rede.
+Suporte a segurança de sistema: Forneça suporte a segurança de sistema, incluindo a criação de sistemas de segurança e a manipulação de permissões de sistema.
+Suporte a detecção de malware: Adicione suporte a detecção de malware, incluindo a criação de sistemas de detecção de malware e a manipulação de dados de malware.
+Suporte a resposta a incidentes: Forneça suporte a resposta a incidentes, incluindo a criação de planos de resposta a incidentes e a manipulação de dados de incidentes.
+Outros
+
+Suporte a linguagens de script: Adicione suporte a linguagens de script, incluindo a criação de scripts e a manipulação de dados de script.
+Suporte a integração com outras ferramentas: Forneça suporte a integração com outras ferramentas, incluindo a criação de interfaces de programação de aplicativos (APIs) e a manipulação de dados de outras ferramentas.
+Suporte a documentação: Adicione suporte a documentação, incluindo a criação de documentação e a manipulação de dados de documentação.
+
+Entendi! Suporte a integração de bibliotecas Python na sua linguagem pode ser uma ótima ideia, especialmente se você deseja atrair desenvolvedores Python para sua linguagem. Aqui estão algumas formas pelas quais você pode implementar essa integração:
+
+1. Binding Python: Crie um binding Python para sua linguagem, que permita que os desenvolvedores chamem funções e bibliotecas Python diretamente da sua linguagem. Isso pode ser feito criando uma camada de abstração entre a linguagem e a biblioteca Python, que traduz as chamadas de função e os tipos de dados.
+2. API de Integração: Crie uma API de integração que permita que os desenvolvedores criem wrappers para bibliotecas Python em sua linguagem. Isso pode ser feito criando uma interface de programação de aplicativos (API) que forneça acesso às funcionalidades da biblioteca Python.
+3. Interprete Python Embutido: Embute um interprete Python na sua linguagem, que permita que os desenvolvedores executem código Python diretamente na sua linguagem. Isso pode ser feito criando um interprete Python customizado que seja integrado à sua linguagem.
+4. Conectividade com Python: Forneça conectividade com Python através de uma interface de rede, como uma conexão TCP/IP ou uma interface de mensagem. Isso permitiria que os desenvolvedores criem aplicativos que se comuniquem com bibliotecas Python em tempo real.
+5. Compilador Python: Crie um compilador Python que compile o código Python em código da sua linguagem. Isso permitiria que os desenvolvedores criem aplicativos que utilizem bibliotecas Python sem a necessidade de uma integração direta.
