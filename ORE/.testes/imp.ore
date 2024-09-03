@@ -1,0 +1,4 @@
+impout("<Good Night World>")
+import_lib("math")
+
+impout(math)

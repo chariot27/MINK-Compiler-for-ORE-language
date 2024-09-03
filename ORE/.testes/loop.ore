@@ -1,0 +1,12 @@
+impout("Goodnight World!")
+var a = 0
+while a <= 5 then 
+    var a = a + 1
+end
+impout(a)
+
+var i = 0
+while i < 10 then
+    var i = i + 1
+end
+impout(i)

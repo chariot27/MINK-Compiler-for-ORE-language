@@ -6,8 +6,9 @@ from format import *
 
 import string
 import os
+import sys
 import math
-import socket
+import importlib
 
 #######################################
 # CONSTANTS
@@ -1495,6 +1496,7 @@ Number.null = Number(0)
 Number.false = Number(0)
 Number.true = Number(1)
 Number.math_PI = Number(math.pi)
+Number.math_E = Number(math.e)
 
 class String(Value):
   def __init__(self, value):
@@ -1660,8 +1662,28 @@ class Function(BaseFunction):
     return f"<function {self.name}>"
 
 class BuiltInFunction(BaseFunction):
-  def __init__(self, name):
-    super().__init__(name)
+  def __init__(self, name, func=None, doc=None):
+        super().__init__(name)
+        self.func = func
+        self.doc = doc
+  
+  def execute_import(self, exec_ctx):
+    res = RTResult()
+    library_name = exec_ctx.symbol_table.get("library").value
+
+    try:
+      imported_module = importlib.import_module(library_name)
+    except Exception as e:
+      return res.failure(RTError(
+        self.pos_start, self.pos_end,
+        f"Failed to import library \"{library_name}\"\n" + str(e),
+        exec_ctx
+      ))
+
+    modified_code = f"import {library_name}\n" \
+                  f"var {library_name.lower()} = {library_name}.{list(imported_module.__dict__.keys())[0]}\n"
+    return res.success(String(modified_code))
+  execute_import.arg_names = ["library"]        
 
   def execute(self, args):
     res = RTResult()
@@ -1869,6 +1891,7 @@ BuiltInFunction.pop         = BuiltInFunction("pop")
 BuiltInFunction.extend      = BuiltInFunction("extend")
 BuiltInFunction.len					= BuiltInFunction("len")
 BuiltInFunction.run					= BuiltInFunction("run")
+BuiltInFunction.digging_    = BuiltInFunction("digging")
 
 #######################################
 # CONTEXT
@@ -2165,6 +2188,7 @@ global_symbol_table.set("NULL", Number.null)
 global_symbol_table.set("FALSE", Number.false)
 global_symbol_table.set("TRUE", Number.true)
 global_symbol_table.set("math_pi", Number.math_PI)
+global_symbol_table.set("math_e", Number.math_E)
 global_symbol_table.set("impout", BuiltInFunction.print)
 global_symbol_table.set("IMPOUT_RET", BuiltInFunction.print_ret)
 global_symbol_table.set("input", BuiltInFunction.input)
