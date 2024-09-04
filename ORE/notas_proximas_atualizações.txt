@@ -38,8 +38,6 @@ Suporte a linguagens de script: Adicione suporte a linguagens de script, incluin
 Suporte a integração com outras ferramentas: Forneça suporte a integração com outras ferramentas, incluindo a criação de interfaces de programação de aplicativos (APIs) e a manipulação de dados de outras ferramentas.
 Suporte a documentação: Adicione suporte a documentação, incluindo a criação de documentação e a manipulação de dados de documentação.
 
-Entendi! Suporte a integração de bibliotecas Python na sua linguagem pode ser uma ótima ideia, especialmente se você deseja atrair desenvolvedores Python para sua linguagem. Aqui estão algumas formas pelas quais você pode implementar essa integração:
-
 1. Binding Python: Crie um binding Python para sua linguagem, que permita que os desenvolvedores chamem funções e bibliotecas Python diretamente da sua linguagem. Isso pode ser feito criando uma camada de abstração entre a linguagem e a biblioteca Python, que traduz as chamadas de função e os tipos de dados.
 2. API de Integração: Crie uma API de integração que permita que os desenvolvedores criem wrappers para bibliotecas Python em sua linguagem. Isso pode ser feito criando uma interface de programação de aplicativos (API) que forneça acesso às funcionalidades da biblioteca Python.
 3. Interprete Python Embutido: Embute um interprete Python na sua linguagem, que permita que os desenvolvedores executem código Python diretamente na sua linguagem. Isso pode ser feito criando um interprete Python customizado que seja integrado à sua linguagem.
