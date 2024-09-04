@@ -1,3 +1,10 @@
+Understanding the Python C API
+The Python C API is a set of functions and macros that allow you to embed the Python interpreter into your application. To study the Python C API, you should:
+
+Read the official Python documentation on the Python C API, which provides detailed information on the available functions and macros.
+Experiment with the Python C API by writing sample code that demonstrates how to use the different functions and macros.
+Study the Python source code to gain a deeper understanding of how the Python interpreter works and how the C API is used internally.
+
 manipulação de strings com números via input e impout
 suporte a quebra de linha
 adição da operação de resto da divisão na minha linguagem
